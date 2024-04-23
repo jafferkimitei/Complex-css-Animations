@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Scrolling Effect</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            height: 2000px;
+            overflow-x: hidden;
+        }
+
+        .parallax {
+            background-image: url('background.jpg');
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+        }
+
+        .parallax h1 {
+            font-size: 3rem;
+        }
+
+        .content {
+            padding: 50px;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .section {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .section:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .section:nth-child(odd) {
+            background-color: #fff;
+        }
+
+        .section h2 {
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="parallax">
+        <h1>Welcome to Parallax Scrolling</h1>
+    </div>
+
+    <div class="section">
+        <div class="content">
+            <h2>Section 1</h2>
+            <p>This is the first section of content.</p>
+        </div>
+    </div>
+
+    <div class="parallax">
+        <h1>Scroll down for more</h1>
+    </div>
+
+    <div class="section">
+        <div class="content">
+            <h2>Section 2</h2>
+            <p>This is the second section of content.</p>
+        </div>
+    </div>
+
+    <!-- Add more sections and parallax divs as needed -->
+
+</body>
+</html>
