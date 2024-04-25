@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Timeline</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+        .event {
+            position: relative;
+            margin-bottom: 50px;
+            padding-left: 20px;
+        }
+        .event::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 10px;
+            height: 10px;
+            background-color: #007bff;
+            border-radius: 50%;
+            transform: translateY(-50%);
+        }
+        .event .date {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .event .description {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="timeline">
+        <div class="event" data-date="2022-01-01">
+            <div class="date">January 1, 2022</div>
+            <div class="description">Event 1 description</div>
+        </div>
+        <div class="event" data-date="2022-03-15">
+            <div class="date">March 15, 2022</div>
+            <div class="description">Event 2 description</div>
+        </div>
+        <!-- Add more events as needed -->
+    </div>
+
+    <script>
+        // Add interactivity with JavaScript
+        const events = document.querySelectorAll('.event');
+        events.forEach(event => {
+            event.addEventListener('click', () => {
+                alert(event.dataset.date);
+                // You can customize the interaction based on your requirements
+            });
+        });
+    </script>
+</body>
+</html>
