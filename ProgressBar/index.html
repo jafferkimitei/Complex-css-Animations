@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Progress Bars</title>
+    <style>
+        .progress-bar {
+            width: 100%;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .progress {
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+            color: white;
+            border-radius: 5px;
+            background-color: #007bff;
+            animation: progressAnimation 3s ease-in-out forwards;
+        }
+
+        @keyframes progressAnimation {
+            0% {
+                width: 0%;
+            }
+            100% {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="progress-bar">
+    <div class="progress">30%</div>
+</div>
+
+<div class="progress-bar">
+    <div class="progress">60%</div>
+</div>
+
+<div class="progress-bar">
+    <div class="progress">90%</div>
+</div>
+
+</body>
+</html>
